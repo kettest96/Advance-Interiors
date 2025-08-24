@@ -3,100 +3,169 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advance Interiors - Interior Design Services</title>
-  
-  <!-- EmailJS SDK -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script>
-    (function(){
-      emailjs.init("ZO_vQTD9tYkcPB7zN"); // 🔑 replace with your EmailJS Public Key
-    })();
-
-    function sendEmail(event) {
-      event.preventDefault();
-
-      emailjs.sendForm("service_arl7id7", "template_i2arkl5", "#contact-form")
-        .then(function() {
-          alert("✅ Message sent successfully!");
-          document.getElementById("contact-form").reset();
-        }, function(error) {
-          alert("❌ Error sending message:\n" + JSON.stringify(error));
-        });
-    }
-  </script>
-
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fa; color: #333; }
-    header { background: #2c3e50; color: #fff; padding: 40px 20px; text-align: center; }
-    header h1 { margin: 0; font-size: 2.5em; }
-    nav { background: #34495e; padding: 10px; text-align: center; }
-    nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    section { padding: 40px; max-width: 1000px; margin: auto; }
-    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-    .card { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); text-align: center; }
-    .card img { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
-    form { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    input, textarea, button { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
-    button { background: #2c3e50; color: #fff; border: none; cursor: pointer; font-size: 1em; }
-    button:hover { background: #1a252f; }
-    footer { background: #2c3e50; color: #fff; text-align: center; padding: 15px; margin-top: 30px; }
-  </style>
+  <title>Advanceinteriro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
-<body>
-  <header>
-    <h1>Advance Interiors</h1>
-    <p>Transforming Spaces with Modern Interior Designs</p>
+<body class="font-sans text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-md fixed w-full top-0 left-0 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold text-blue-600">Advanceinteriro</h1>
+      <nav>
+        <ul class="flex space-x-6 text-gray-700 font-medium">
+          <li><a href="#about" class="hover:text-blue-600">About</a></li>
+          <li><a href="#services" class="hover:text-blue-600">Services</a></li>
+          <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
+          <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p>
-      At Advanceinteriro, we specialize in creating beautiful and functional interiors for homes,
-      offices, and commercial spaces. Our mission is to design spaces that reflect your personality and style.
-    </p>
+  <!-- Hero Section -->
+  <section class="bg-gray-100 h-screen flex items-center justify-center text-center">
+    <div>
+      <h2 class="text-5xl font-bold mb-4">Transforming Spaces with Style</h2>
+      <p class="text-lg mb-6">Advanceinteriro brings your dream interiors to life with modern and elegant designs.</p>
+      <a href="#contact" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700">Get Started</a>
+    </div>
   </section>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=800&q=80" alt="Residential Interior">
-        <h3>Residential Interiors</h3>
-        <p>Modern and classic designs for your dream home.</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Commercial Interior">
-        <h3>Commercial Interiors</h3>
-        <p>Professional and elegant spaces for businesses.</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80" alt="Custom Furniture">
-        <h3>Custom Furniture</h3>
-        <p>Tailored furniture to fit your style and needs.</p>
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-6">About Us</h2>
+      <p class="text-lg text-gray-600">
+        At Advanceinteriro, we specialize in designing modern, elegant, and functional interiors 
+        for homes and businesses. Our team of experts ensures every project reflects your unique style.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-12">Our Services</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=800&q=80" alt="Residential Interior" class="rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-2">Residential Interiors</h3>
+          <p>Create warm and stylish living spaces for your family.</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <img src="https://plus.unsplash.com/premium_photo-1680098700813-0eaf76e9bfc6?auto=format&fit=crop&w=800&q=80" alt="Commercial Interior" class="rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-2">Commercial Interiors</h3>
+          <p>Professional and elegant spaces for businesses.</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Custom Furniture" class="rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-2">Custom Furniture</h3>
+          <p>Tailored furniture to fit your style and needs.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form id="contact-form" onsubmit="sendEmail(event)">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="tel" name="phone" placeholder="Your Mobile Number" required>
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-12">Our Projects</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <div class="rounded-lg shadow-md overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Living Room" class="w-full h-64 object-cover">
+        </div>
+        
+        <div class="rounded-lg shadow-md overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=800&q=80" alt="Kitchen" class="w-full h-64 object-cover">
+        </div>
+        
+        <div class="rounded-lg shadow-md overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1600585154154-1c1e1a0b4d6d?auto=format&fit=crop&w=800&q=80" alt="Office" class="w-full h-64 object-cover">
+        </div>
 
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Enquiry</button>
-    </form>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Advance Interiors. All Rights Reserved.</p>
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-6">Get In Touch</h2>
+      <p class="text-center text-gray-600 mb-12">We’d love to hear about your project</p>
+      
+      <form id="inquiryForm" class="bg-white p-8 rounded-lg shadow-md">
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border rounded-lg">
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border rounded-lg">
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Mobile Number *</label>
+          <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 border rounded-lg">
+        </div>
+
+        <div class="mb-6">
+          <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Project Details *</label>
+          <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border rounded-lg"></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg">
+          Submit Inquiry
+        </button>
+
+        <div id="formMessage" class="mt-4 text-center hidden"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-6">
+    <p>&copy; 2025 Advanceinteriro. All rights reserved.</p>
   </footer>
+
+  <!-- EmailJS Script -->
+  <script>
+    (function(){
+      emailjs.init("ZO_vQTD9tYkcPB7zN"); // your EmailJS public key
+    })();
+
+    document.getElementById('inquiryForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        message: document.getElementById('message').value
+      };
+
+      emailjs.send("service_arl7id7", "template_i2arkl5", formData)
+        .then(() => {
+          document.getElementById('formMessage').textContent = "✅ Thank you! Your inquiry has been sent.";
+          document.getElementById('formMessage').className = "mt-4 text-center text-green-600";
+          document.getElementById('formMessage').classList.remove('hidden');
+          document.getElementById('inquiryForm').reset();
+        }, (error) => {
+          document.getElementById('formMessage').textContent = "❌ Error sending message. Try again.";
+          document.getElementById('formMessage').className = "mt-4 text-center text-red-600";
+          document.getElementById('formMessage').classList.remove('hidden');
+          console.error("EmailJS error:", error);
+        });
+    });
+  </script>
+
 </body>
 </html>
