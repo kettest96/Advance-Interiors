@@ -311,7 +311,7 @@
 
     <script>
         // Initialize EmailJS (You need to create an account at emailjs.com and replace these with your credentials)
-        emailjs.init("YOUR_EMAILJS_PUBLIC_KEY"); // Replace with your actual public key
+        emailjs.init("ZO_vQTD9tYkcPB7zN"); // Replace with your actual public key
 
         // Image Slider Functionality
         const slides = document.querySelectorAll('.hero-slide');
@@ -377,7 +377,7 @@
             };
 
             // Send email using EmailJS (Replace with your actual service ID and template ID)
-            emailjs.send("YOUR_EMAILJS_SERVICE_ID", "YOUR_EMAILJS_TEMPLATE_ID", formData)
+            emailjs.send("service_arl7id7", "template_i2arkl5", formData)
                 .then(function(response) {
                     document.getElementById('formMessage').textContent = "Thank you! Your inquiry has been sent successfully.";
                     document.getElementById('formMessage').className = "mt-4 text-center text-green-600";
