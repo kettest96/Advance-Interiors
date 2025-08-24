@@ -1,171 +1,428 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advanceinteriro</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Interiors - Premium Interior Design Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <style>
+        .hero-slide {
+            transition: opacity 1s ease-in-out;
+        }
+        .gallery-item {
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        .admin-panel {
+            backdrop-filter: blur(10px);
+        }
+    </style>
 </head>
-<body class="font-sans text-gray-800">
-
-  <!-- Navbar -->
-  <header class="bg-white shadow-md fixed w-full top-0 left-0 z-50">
-    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
-      <h1 class="text-2xl font-bold text-blue-600">Advanceinteriro</h1>
-      <nav>
-        <ul class="flex space-x-6 text-gray-700 font-medium">
-          <li><a href="#about" class="hover:text-blue-600">About</a></li>
-          <li><a href="#services" class="hover:text-blue-600">Services</a></li>
-          <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
-          <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="bg-gray-100 h-screen flex items-center justify-center text-center">
-    <div>
-      <h2 class="text-5xl font-bold mb-4">Transforming Spaces with Style</h2>
-      <p class="text-lg mb-6">Advanceinteriro brings your dream interiors to life with modern and elegant designs.</p>
-      <a href="#contact" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700">Get Started</a>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="py-20 bg-white">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold mb-6">About Us</h2>
-      <p class="text-lg text-gray-600">
-        At Advanceinteriro, we specialize in designing modern, elegant, and functional interiors 
-        for homes and businesses. Our team of experts ensures every project reflects your unique style.
-      </p>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="py-20 bg-gray-50">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold mb-12">Our Services</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        
-        <div class="bg-white rounded-lg shadow-md p-6">
-          <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=800&q=80" alt="Residential Interior" class="rounded-lg mb-4">
-          <h3 class="text-xl font-semibold mb-2">Residential Interiors</h3>
-          <p>Create warm and stylish living spaces for your family.</p>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-gray-800">Advance Interiors</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-blue-600">Gallery</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600">Services</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600">About</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
         </div>
+    </nav>
 
-        <div class="bg-white rounded-lg shadow-md p-6">
-          <img src="https://plus.unsplash.com/premium_photo-1680098700813-0eaf76e9bfc6?auto=format&fit=crop&w=800&q=80" alt="Commercial Interior" class="rounded-lg mb-4">
-          <h3 class="text-xl font-semibold mb-2">Commercial Interiors</h3>
-          <p>Professional and elegant spaces for businesses.</p>
+    <!-- Hero Section with Image Slider -->
+    <section id="home" class="pt-20">
+        <div class="relative h-screen">
+            <!-- Slide 1 -->
+            <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/da5bfc71-4c3f-4e4a-a6bd-d8a857886372.png" alt="Luxury modern living room with minimalist decor, large windows, and contemporary furniture design" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                <div class="absolute inset-0 flex items-center justify-center text-center text-white">
+                    <div class="max-w-4xl px-4">
+                        <h2 class="text-5xl md:text-7xl font-bold mb-6">Transform Your Space</h2>
+                        <p class="text-xl md:text-2xl mb-8">Premium interior design solutions for modern living</p>
+                        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition duration-300 inline-block">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9bb70540-c51a-4284-8d08-2d26516fed66.png" alt="Elegant contemporary dining space with custom lighting and premium materials" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                <div class="absolute inset-0 flex items-center justify-center text-center text-white">
+                    <div class="max-w-4xl px-4">
+                        <h2 class="text-5xl md:text-7xl font-bold mb-6">Creative Excellence</h2>
+                        <p class="text-xl md:text-2xl mb-8">Innovative designs that inspire and transform</p>
+                        <a href="#gallery" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition duration-300 inline-block">View Portfolio</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/57e9b0bf-201b-4bfa-bc61-a0a818924f4e.png" alt="Modern luxury bedroom suite with custom millwork and premium finishes" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                <div class="absolute inset-0 flex items-center justify-center text-center text-white">
+                    <div class="max-w-4xl px-4">
+                        <h2 class="text-5xl md:text-7xl font-bold mb-6">Personalized Designs</h2>
+                        <p class="text-xl md:text-2xl mb-8">Tailored solutions for your unique vision</p>
+                        <a href="#services" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition duration-300 inline-block">Our Services</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4a94d9d0-910f-44e0-be1d-8c0ca29fa2ed.png" alt="Sophisticated home office with built-in cabinetry and panoramic city views" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                <div class="absolute inset-0 flex items-center justify-center text-center text-white">
+                    <div class="max-w-4xl px-4">
+                        <h2 class="text-5xl md:text-7xl font-bold mb-6">Attention to Detail</h2>
+                        <p class="text-xl md:text-2xl mb-8">Craftsmanship that exceeds expectations</p>
+                        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition duration-300 inline-block">Schedule Consultation</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-3">
+                <button class="slider-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100"></button>
+                <button class="slider-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100"></button>
+                <button class="slider-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100"></button>
+                <button class="slider-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100"></button>
+            </div>
+            
+            <button class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl hover:text-blue-300 transition duration-300 slider-prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl hover:text-blue-300 transition duration-300 slider-next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
+    </section>
 
-        <div class="bg-white rounded-lg shadow-md p-6">
-          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Custom Furniture" class="rounded-lg mb-4">
-          <h3 class="text-xl font-semibold mb-2">Custom Furniture</h3>
-          <p>Tailored furniture to fit your style and needs.</p>
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">Our Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6 bg-gray-50 rounded-lg">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-home text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Residential Design</h3>
+                    <p class="text-gray-600">Transform your home into a personalized sanctuary with our expert residential design services.</p>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-building text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Commercial Design</h3>
+                    <p class="text-gray-600">Create inspiring workspaces that boost productivity and reflect your company's brand identity.</p>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-paint-roller text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Custom Solutions</h3>
+                    <p class="text-gray-600">Tailored interior solutions that meet your specific needs and exceed your expectations.</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold mb-12">Our Projects</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        
-        <div class="rounded-lg shadow-md overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Living Room" class="w-full h-64 object-cover">
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">Our Portfolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="gallery-item overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/512921a2-0756-4af4-805a-3a96245d0e7b.png" alt="Modern kitchen design with white cabinets, marble countertops, and stainless steel appliances" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold">Modern Kitchen</h3>
+                        <p class="text-gray-600 text-sm">Contemporary design with premium finishes</p>
+                    </div>
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9bb70540-c51a-4284-8d08-2d26516fed66.png" alt="Elegant living room with sectional sofa, fireplace, and large windows overlooking cityscape" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold">Elegant Living Room</h3>
+                        <p class="text-gray-600 text-sm">Comfort meets sophistication</p>
+                    </div>
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/57e9b0bf-201b-4bfa-bc61-a0a818924f4e.png" alt="Luxury bedroom suite with king-sized bed, walk-in closet, and ensuite bathroom" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold">Master Bedroom</h3>
+                        <p class="text-gray-600 text-sm">Luxury retreat for relaxation</p>
+                    </div>
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a81f3420-b7ec-437e-be8b-e375c26d602d.png" alt="Minimalist home office with standing desk, ergonomic chair, and built-in shelving" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold">Home Office</h3>
+                        <p class="text-gray-600 text-sm">Productive and stylish workspace</p>
+                    </div>
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4a94d9d0-910f-44e0-be1d-8c0ca29fa2ed.png" alt="Spa-like bathroom with freestanding tub, rainfall shower, and natural stone finishes" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold">Luxury Bathroom</h3>
+                        <p class="text-gray-600 text-sm">Spa-inspired retreat</p>
+                    </div>
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/88586934-ae1d-4c1e-a00c-27ecd52d291c.png" alt="Open-plan dining area with extendable table, statement lighting, and panoramic views" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold">Dining Area</h3>
+                        <p class="text-gray-600 text-sm">Perfect for entertaining</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <div class="rounded-lg shadow-md overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=800&q=80" alt="Kitchen" class="w-full h-64 object-cover">
-        </div>
-        
-        <div class="rounded-lg shadow-md overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1600585154154-1c1e1a0b4d6d?auto=format&fit=crop&w=800&q=80" alt="Office" class="w-full h-64 object-cover">
-        </div>
+    </section>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 bg-gray-50">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-6">Get In Touch</h2>
-      <p class="text-center text-gray-600 mb-12">We’d love to hear about your project</p>
-      
-      <form id="inquiryForm" class="bg-white p-8 rounded-lg shadow-md">
-        <div class="grid md:grid-cols-2 gap-6 mb-6">
-          <div>
-            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
-            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border rounded-lg">
-          </div>
-          <div>
-            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
-            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border rounded-lg">
-          </div>
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-2">Get In Touch</h2>
+            <p class="text-lg text-center text-gray-600 mb-12">Let's discuss your interior design project</p>
+            
+            <form id="inquiryForm" class="bg-gray-50 p-8 rounded-lg shadow-md">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Mobile Number *</label>
+                    <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                </div>
+                
+                <div class="mb-6">
+                    <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Project Details *</label>
+                    <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                </div>
+                
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+                    Submit Inquiry
+                </button>
+                
+                <div id="formMessage" class="mt-4 text-center hidden"></div>
+            </form>
         </div>
+    </section>
 
-        <div class="mb-6">
-          <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Mobile Number *</label>
-          <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 border rounded-lg">
+    <!-- Admin Panel (Frontend Only - Requires Backend Integration) -->
+    <section id="admin" class="py-20 bg-gray-100 hidden">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Admin Panel</h2>
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Upload New Gallery Images</h3>
+                    <input type="file" id="galleryUpload" multiple accept="image/*" class="w-full p-3 border border-gray-300 rounded-lg">
+                    <button class="mt-3 bg-blue-600 text-white px-6 py-2 rounded-lg">Upload Images</button>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Manage Inquiries</h3>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <p class="text-gray-600">Inquiry management dashboard would be displayed here with backend integration.</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Website Analytics</h3>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <p class="text-gray-600">Website traffic and engagement statistics would be displayed here.</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="mb-6">
-          <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Project Details *</label>
-          <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border rounded-lg"></textarea>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Advance Interiors</h3>
+                    <p class="text-gray-400">Transforming spaces with innovative design solutions and premium craftsmanship.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-white">Gallery</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact Info</h4>
+                    <p class="text-gray-400">Email: advanceinteriors@gmail.com</p>
+                    <p class="text-gray-400">Phone: +91 700479798</p>
+                    <p class="text-gray-400">Address: Mahavir colony, Beur More, Patna 800002</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 Advance Interiors. All rights reserved.</p>
+            </div>
         </div>
+    </footer>
 
-        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg">
-          Submit Inquiry
+    <!-- Admin Access Button -->
+    <div class="fixed bottom-4 right-4">
+        <button id="adminToggle" class="bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
+            <i class="fas fa-cog"></i>
         </button>
-
-        <div id="formMessage" class="mt-4 text-center hidden"></div>
-      </form>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white text-center py-6">
-    <p>&copy; 2025 Advanceinteriro. All rights reserved.</p>
-  </footer>
+    <script>
+        // Initialize EmailJS (You need to create an account at emailjs.com and replace these with your credentials)
+        emailjs.init("ZO_vQTD9tYkcPB7zN"); // Replace with your actual public key
 
-  <!-- EmailJS Script -->
-  <script>
-    (function(){
-      emailjs.init("ZO_vQTD9tYkcPB7zN"); // your EmailJS public key
-    })();
+        // Image Slider Functionality
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots = document.querySelectorAll('.slider-dot');
+        const prevButton = document.querySelector('.slider-prev');
+        const nextButton = document.querySelector('.slider-next');
+        let currentSlide = 0;
 
-    document.getElementById('inquiryForm').addEventListener('submit', function(e) {
-      e.preventDefault();
+        function showSlide(index) {
+            slides.forEach(slide => slide.style.opacity = '0');
+            dots.forEach(dot => dot.style.backgroundColor = 'rgba(255,255,255,0.5)');
+            
+            slides[index].style.opacity = '1';
+            dots[index].style.backgroundColor = 'white';
+            currentSlide = index;
+        }
 
-      const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        message: document.getElementById('message').value
-      };
+        function nextSlide() {
+            showSlide((currentSlide + 1) % slides.length);
+        }
 
-      emailjs.send("service_arl7id7", "template_i2arkl5", formData)
-        .then(() => {
-          document.getElementById('formMessage').textContent = "✅ Thank you! Your inquiry has been sent.";
-          document.getElementById('formMessage').className = "mt-4 text-center text-green-600";
-          document.getElementById('formMessage').classList.remove('hidden');
-          document.getElementById('inquiryForm').reset();
-        }, (error) => {
-          document.getElementById('formMessage').textContent = "❌ Error sending message. Try again.";
-          document.getElementById('formMessage').className = "mt-4 text-center text-red-600";
-          document.getElementById('formMessage').classList.remove('hidden');
-          console.error("EmailJS error:", error);
+        function prevSlide() {
+            showSlide((currentSlide - 1 + slides.length) % slides.length);
+        }
+
+        // Initialize slider
+        showSlide(0);
+        
+        // Auto-advance slides every 5 seconds
+        let slideInterval = setInterval(nextSlide, 5000);
+
+        // Event listeners for manual navigation
+        nextButton.addEventListener('click', () => {
+            clearInterval(slideInterval);
+            nextSlide();
+            slideInterval = setInterval(nextSlide, 5000);
         });
-    });
-  </script>
+        
+        prevButton.addEventListener('click', () => {
+            clearInterval(slideInterval);
+            prevSlide();
+            slideInterval = setInterval(nextSlide, 5000);
+        });
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                showSlide(index);
+                slideInterval = setInterval(nextSlide, 5000);
+            });
+        });
 
+        // Form Submission with EmailJS
+        document.getElementById('inquiryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                message: document.getElementById('message').value,
+                timestamp: new Date().toLocaleString()
+            };
+
+            // Send email using EmailJS (Replace with your actual service ID and template ID)
+            emailjs.send("service_arl7id7", "template_i2arkl5", formData)
+                .then(function(response) {
+                    document.getElementById('formMessage').textContent = "Thank you! Your inquiry has been sent successfully.";
+                    document.getElementById('formMessage').className = "mt-4 text-center text-green-600";
+                    document.getElementById('formMessage').classList.remove('hidden');
+                    document.getElementById('inquiryForm').reset();
+                }, function(error) {
+                    document.getElementById('formMessage').textContent = "Sorry, there was an error sending your message. Please try again.";
+                    document.getElementById('formMessage').className = "mt-4 text-center text-red-600";
+                    document.getElementById('formMessage').classList.remove('hidden');
+                });
+        });
+
+        // Admin Panel Toggle
+        document.getElementById('adminToggle').addEventListener('click', function() {
+            const adminPanel = document.getElementById('admin');
+            adminPanel.classList.toggle('hidden');
+        });
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const navLinks = document.querySelector('.hidden.md\\:flex');
+            navLinks.classList.toggle('hidden');
+            navLinks.classList.toggle('absolute');
+            navLinks.classList.toggle('top-16');
+            navLinks.classList.toggle('left-0');
+            navLinks.classList.toggle('w-full');
+            navLinks.classList.toggle('bg-white');
+            navLinks.classList.toggle('shadow-lg');
+            navLinks.classList.toggle('flex-col');
+            navLinks.classList.toggle('p-4');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
